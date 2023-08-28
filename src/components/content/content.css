@@ -1,0 +1,8 @@
+.content_dod {
+    background-color: blue;
+    color: rgb(230, 240, 250);
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+

@@ -1,0 +1,17 @@
+html {
+  font-size: 10px;
+}
+
+body{
+  background-color: blueviolet;
+}
+
+.innerWrapper {  
+  max-width: 130rem;
+  padding: 1rem;
+  background-color: aquamarine;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3rem;
+}

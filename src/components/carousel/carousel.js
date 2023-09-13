@@ -8,7 +8,6 @@ import Button from '@mui/material/Button';
 import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
-import LinearProgressWithLabel from '@mui/material/LinearProgress'
 import './carousel.css'
 import ProgressLoader from './progressLoader';
 
@@ -78,20 +77,21 @@ function Carousel() {
           <div key={step.label}>
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
-                component="img"
-                sx={{
-                  height: 255,
-                  display: 'block',
-                  maxWidth: 400,
-                  overflow: 'hidden',
-                  width: '100%',
-                }}
-                src={step.imgPath}
-                alt={step.label}
-              />
+              component="img"
+              sx={{
+                height: 255,
+                display: 'block',
+                maxWidth: 400,
+                overflow: 'hidden',
+                width: '100%',
+              }}
+              src={step.imgPath}
+              alt={step.label}
+            />
+           
             ) : null}
           </div>
-        ))}
+        ))}           
       </SwipeableViews>
       <ProgressLoader value={50} />
       <MobileStepper

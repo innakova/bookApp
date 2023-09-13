@@ -1,0 +1,38 @@
+/* import { useState } from 'react'
+import './counter.css'
+
+export default function Counter() {
+
+    const [count, setCount] = useState(0); 
+
+    const handelIncrement = () => (
+        // setCount(count + 1)
+        setCount((oldValue) => oldValue + 1)
+    )
+
+    const handelDecrement = () => {
+        // setCount(count - 1)
+        setCount((oldValue) => {
+            const decrementValue = oldValue - 1
+            return decrementValue
+        })
+    }
+
+    const handleReset = () => (
+        setCount(0)
+    )
+
+    return (
+        <div>
+            <div>
+                <h1>{count}</h1>
+                <div>
+                    <button onClick={handelIncrement}>Increment</button>
+                    <button onClick={handelDecrement}>Decrement</button>
+                    <button onClick={handleReset}>RESET</button>
+                </div>
+            </div>
+        </div>
+    )
+}
+ */

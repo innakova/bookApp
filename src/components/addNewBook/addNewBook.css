@@ -1,0 +1,32 @@
+body.active-modal {
+    overflow-y: hidden;
+}
+
+.btn-modal {
+    padding: 10px, 20px;
+    display: block;
+    margin: 100px auto 0;
+    font-size: 18px;
+}
+
+.modal, .overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: relative;
+}
+
+.overlay {
+    background: gray;
+    z-index: 1;
+}
+
+.modal-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    z-index: 2;
+}

@@ -1,0 +1,9 @@
+.last-book-block-title {
+    text-align: center;
+    font-size: 23px;
+}
+
+.post-block {
+    display: flex;
+    column-gap: 1.5rem;
+}

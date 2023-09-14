@@ -6,7 +6,7 @@ export default function AddNewBook ({modal, toggleModal}) {
         <>
        
        {modal && (
-        <div className="modal">
+        <div className="modal btn-modal">
             <div 
             onClick={toggleModal}
             className="overlay"
@@ -14,16 +14,19 @@ export default function AddNewBook ({modal, toggleModal}) {
             <div className="modal-content">
                 <h2
                 onClick={()=>console.log('hi')}
-                >Window</h2>
+                >Add a new book</h2>
                 <p>
-                    hdbvcgdbhdbjd
-                    sdbchdvbdfjv
-                    jksdnkdv
+                   Enter details
                 </p>
-
+                <div className="book-input">
+                    <input type="text" placeholder="Book name" alt="Wind"></input>
+                    <input type="text" placeholder="Book author" alt="King"></input>
+                    <input type="number" placeholder="How meny pages" alt="100"></input>
+                    {/* <input type="image" placeholder="Have a photo title"></input> */}
+                </div>
                 <button
                 className="close-modal"
-                onClick={()=>console.log('hi')}
+                onClick={toggleModal}
                 >Close</button>
             </div>
         </div> 

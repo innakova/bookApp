@@ -2,3 +2,8 @@
     margin: 0 auto;
     max-width: 115rem;
 }
+
+.book-on-step {
+    font-size: larger;
+    color: brown;
+}

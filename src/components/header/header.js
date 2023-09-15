@@ -5,7 +5,7 @@ import AddNewBook from '../addNewBook/addNewBook';
 import { useState } from 'react';
 
 
-export const Header = ({heder_title}) => {
+export const Header = ({heder_title, setPosts}) => {
 
     const [modal, setModal] = useState(false);
 
@@ -24,6 +24,7 @@ export const Header = ({heder_title}) => {
                 onClick={toggleModal}
                 />
                 <AddNewBook
+                setPosts={setPosts}
                 modal={modal}
                 toggleModal={toggleModal}
                  />

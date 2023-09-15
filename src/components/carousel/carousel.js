@@ -16,7 +16,7 @@ const images = [
   {
     label: 'San Francisco – Oakland Bay Bridge, United States',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://vivat-book.com.ua/upload/iblock/bfa/bfaae39d5585d970b7ed5740ec0aa8fc.jpg',
   },
   {
     label: 'Bird',
@@ -35,10 +35,11 @@ const images = [
   },
 ];
 
-function Carousel() {
+function Carousel({posts}) {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
   const maxSteps = images.length;
+  const curentBook = posts[activeStep];
 
   const handleNext = () => {
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
@@ -52,6 +53,7 @@ function Carousel() {
     setActiveStep(step);
   };
 
+ 
   return (
     <Box sx={{ flexGrow: 1 }} className='carousel'>
       <Paper
@@ -65,8 +67,12 @@ function Carousel() {
           bgcolor: 'background.default',
         }}
       >
-        <Typography>{images[activeStep].label}</Typography>
+        <Typography>{images[activeStep].label}</Typography>       
       </Paper>
+      <div className='book-on-step'>
+          {curentBook.title} 
+          {curentBook.body}           
+      </div>
       <SwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -84,6 +90,7 @@ function Carousel() {
                 maxWidth: 400,
                 overflow: 'hidden',
                 width: '100%',
+                backgroundSize: 'contain'
               }}
               src={step.imgPath}
               alt={step.label}

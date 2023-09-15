@@ -4,13 +4,15 @@ import { BookBlock } from './components/bookBlock/bookBlock';
 import Carousel from './components/carousel/carousel';
 import Counter from './components/counter/counter';
 import {Header} from './components/header/header'
+import { MyButton } from './components/UI/Buttons/MyButton';
 
 function App() {
 
   const [posts, setPosts] = useState ([
-    {title: 'Sarah J. Maas', body: 'Crescent City'},
-    {title: 'Sarah J. Maas', body: 'Crescent City2'},
-    {title: 'Sarah J. Maas', body: 'Crescent City3'},
+    {title: 'Sarah J. Maas', body: 'A Court of Thorns and Roses'},
+    {title: 'Sarah J. Maas', body: 'A Court of Mist and Fury'},
+    {title: 'Sarah J. Maas', body: 'A Court of Wings and Ruin'},
+    {title: 'Sarah J. Maas', body: 'A Court of Frost and Starlight'},
 ])
 
 const [posts2, setPosts2] = useState ([
@@ -21,9 +23,10 @@ const [posts2, setPosts2] = useState ([
 
   return (
    <div className='innerWrapper'>
-    <Header />
-    <Carousel />
+    <Header setPosts={setPosts}/>
+    <Carousel posts={posts} />
     <Counter />
+    <MyButton disabled>Close</MyButton>
     <BookBlock posts={posts}/>
     <BookBlock posts={posts2}/>
     

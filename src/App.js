@@ -4,7 +4,6 @@ import { BookBlock } from './components/bookBlock/bookBlock';
 import Carousel from './components/carousel/carousel';
 import Counter from './components/counter/counter';
 import {Header} from './components/header/header'
-import { MyButton } from './components/UI/Buttons/MyButton';
 
 function App() {
 
@@ -26,7 +25,6 @@ const [posts2, setPosts2] = useState ([
     <Header setPosts={setPosts}/>
     <Carousel posts={posts} />
     <Counter />
-    <MyButton disabled>Close</MyButton>
     <BookBlock posts={posts}/>
     <BookBlock posts={posts2}/>
     

@@ -33,12 +33,10 @@ export default function AddNewBook ({modal, toggleModal, setPosts}) {
             className="overlay"
             ></div>
             <div className="modal-content">
-                <h2
-                onClick={()=>console.log('hi')}
-                >Add a new book</h2>
-                <p>
+                <h2 className="modal-content-title">Add a new book</h2>
+                {/* <p>
                    Enter details
-                </p>
+                </p> */}
                 <div className="book-input">
                     <MyInputs
                         value={title}
@@ -59,14 +57,16 @@ export default function AddNewBook ({modal, toggleModal, setPosts}) {
                     placeholder="How meny pages" alt="100"></MyInputs>
                     {/* <input type="image" placeholder="Have a photo title"></input> */}
                 </div>
-                <MyButton
-                className="close-modal"
-                onClick={toggleModal}
-                >Close</MyButton>
-                <MyButton
-                className="close-modal"
-                onClick={addNewBookToList}
-                >Add</MyButton>
+                <div className="modal-button-block">
+                    <MyButton
+                    className="close-modal"
+                    onClick={toggleModal}
+                    >Close</MyButton>
+                    <MyButton 
+                    className="close-modal"
+                    onClick={addNewBookToList}
+                    >Add</MyButton>
+                </div>
             </div>
         </div> 
         )} 

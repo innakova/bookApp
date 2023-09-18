@@ -1,6 +1,13 @@
 .myInputs {
-    width: 100%;
-    padding: 5px 15px;
+    /* width: 100%; */
+    padding: 5px 10px;
     margin: 5px 0;
-    border: 1px solid teal;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(232 218 245 / 54%);    
+}
+
+.myInputs:focus-visible{
+    border: 1px solid purple;
+    outline: none;
 }

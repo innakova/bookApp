@@ -1,9 +1,10 @@
 .myButtontop {
-    padding: 5px 15px;
-    color: teal;
-    background-color: rgb(0, 255, 76);
-    font-size: 14px;
-    /* background: transparent; */
-    border: 1px solid teal;
-    cursor: pointer;
+    /* padding: 5px 15px; */
+    /* color: teal; */
+    /* background-color: rgb(112, 230, 148); */
+    /* font-size: 14px; */
+    font-size: 12px !important;
+    width: 30%;
+    
 }
+

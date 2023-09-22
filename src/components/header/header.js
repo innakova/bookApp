@@ -16,10 +16,9 @@ export const Header = ({heder_title, setPosts}) => {
     return (
     <>
         <div className='menu'>
-            <h1>Читалка</h1>
+            <h1 className='title-logo'>Читалка</h1>
             <div className='iconMenu'>
                 <AddIcon  
-                
                 sx={{fontSize: '2rem'}}
                 onClick={toggleModal}
                 />

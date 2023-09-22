@@ -4,32 +4,76 @@ import { BookBlock } from './components/bookBlock/bookBlock';
 import Carousel from './components/carousel/carousel';
 import Counter from './components/counter/counter';
 import {Header} from './components/header/header'
+import Conter2 from './components/conter2/conter2';
+// import { SelectList } from './components/selectList/selectList';
+import { MySelect } from './components/UI/select/select';
 
 function App() {
 
   const [posts, setPosts] = useState ([
-    {title: 'Sarah J. Maas', body: 'A Court of Thorns and Roses'},
-    {title: 'Sarah J. Maas', body: 'A Court of Mist and Fury'},
-    {title: 'Sarah J. Maas', body: 'A Court of Wings and Ruin'},
-    {title: 'Sarah J. Maas', body: 'A Court of Frost and Starlight'},
+    {title: 'Sarah J. Maas', body: 'A Court of Thorns and Roses', id:'1', pages: 100},
+    {title: 'Sarah J. Maas', body: 'A Court of Mist and Fury', id:'2', pages: 100},
+    {title: 'Sarah J. Maas', body: 'A Court of Wings and Ruin', id:'3', pages: 100},
+    {title: 'Sarah J. Maas', body: 'A Court of Frost and Starlight', id:'4', pages: 100},
 ])
 
 const [posts2, setPosts2] = useState ([
-  {title: 'Armentraut', body: 'Crescent City'},
-  {title: 'Armentraut', body: 'Crescent City2'},
-  {title: 'Armentraut', body: 'Crescent City3'},
+  {title: 'Sarah J. Maas2', body: 'A Court of Thorns and Roses', id:'1', pages: 100},
+  {title: 'Sarah J. Maas3', body: 'A Court of Mist and Fury', id:'2', pages: 100},
+  {title: 'Sarah J. Maas4', body: 'A Court of Wings and Ruin', id:'3', pages: 100},
+  {title: 'Sarah J. Maas5', body: 'A Court of Frost and Starlight', id:'4', pages: 100},
 ])
+
+const removePost = (post) => {
+  setPosts(posts.filter(p => p.id !== post.id))  
+}
+const removePost2 = (post) => {
+  setPosts2(posts2.filter(p => p.id !== post.id))
+}
+
+// const [selectedSort, setSelectedSort] = useState('')
+    
+//     const sortPosts = (sort) => {
+//         setSelectedSort(sort);
+//         console.log(sort)
+//         setPosts([...posts].sort((a,b) => a[sort].localeCompare(b[sort])))
+//     }
 
   return (
    <div className='innerWrapper'>
     <Header setPosts={setPosts}/>
     <Carousel posts={posts} />
-    <Counter />
-    <BookBlock posts={posts}/>
-    <BookBlock posts={posts2}/>
-    
-   </div>
-  
+    <Counter /> 
+    <MySelect
+      // value={selectedSort}
+      // onChange={sortPosts}
+      defaultValue='Sort'
+      options={[
+          {value:'title', name: "Author"},
+          {value:"body", name:"Book title"},
+          {value:'pages', name:'Page'}
+      ]}/>
+            
+        
+    <Conter2 />
+    {/* <SelectList />    */}
+    {/* {posts.length !== 0
+    ? */}
+    <BookBlock remove={removePost} posts={posts}/>
+    {/* :
+    <div>
+      <h2>No book on library</h2>
+    </div>
+  } */}
+    {posts2.length !== 0
+    ?
+    <BookBlock remove={removePost2} posts={posts2}/>    
+    :
+    <div>
+      <h2>No book on library</h2>
+    </div>
+  }
+   </div>  
   );
 }
 

@@ -1,5 +1,5 @@
 body.active-modal {
-    overflow-y: hidden;
+    overflow-y: hidden;    
 }
 
 .btn-modal {
@@ -41,12 +41,12 @@ body.active-modal {
 
 .modal-content-title{
     font-family: cursive;
-    color: #9c27b0;
+    color: #ffffff;
     text-align: center;
     margin: 0;
     font-size: 40px;
-    -webkit-text-stroke-color: #30054b;
-    -webkit-text-stroke-width: 1px;
+    /* -webkit-text-stroke-color: #30054b;
+    -webkit-text-stroke-width: 1px; */
 }
 
 .book-input {

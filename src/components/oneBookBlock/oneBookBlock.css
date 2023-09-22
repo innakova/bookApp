@@ -4,3 +4,23 @@
     width: 10rem;
     height: 13rem;
 }
+
+.mini-circle-block{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5px;
+}
+
+.mini-circle {
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background-color: yellowgreen;
+    text-align: center;
+    /* vertical-align: middle; */
+    /* font-size: 500%; */
+    /* position: relative; */
+    /* box-shadow: inset 12px 12px 100px #a19999, 10px 10px 20px #8d8b8b, inset 0px 0px 10px black; */
+    /* display: inline-block; */
+     /* margin: 5%;  */
+}

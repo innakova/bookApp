@@ -1,7 +1,7 @@
 import { useState } from "react";
 // import './counter.css'
 
-export default function Counter() {
+export default function Counter () {
 
     const [count, setCount] = useState(0)
 
@@ -16,7 +16,6 @@ export default function Counter() {
     const handelReset = () => {
         setCount(0)
     }
-
 
 
     return (

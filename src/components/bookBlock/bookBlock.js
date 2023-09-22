@@ -2,7 +2,7 @@ import './bookBlock.css'
 import { OneBookBlock } from "../oneBookBlock/oneBookBlock";
 
 
-export const BookBlock = ({posts}) => {
+export const BookBlock = ({posts, remove}) => {
 
     return (
         <div>
@@ -12,6 +12,8 @@ export const BookBlock = ({posts}) => {
             <OneBookBlock
                 title={post.title}
                 body={post.body}
+                remove={() => remove(post)}
+                key={post.id}
             />)}  
           </div>         
         </div>

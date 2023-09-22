@@ -16,3 +16,8 @@ h1 {
     display: flex;
     column-gap: 1.5rem;
   }
+
+
+.title-logo{
+  color: rgb(43, 11, 73);
+}

@@ -21,6 +21,7 @@ const images = [
   {
     label: 'Bird',
     imgPath:
+    // <img src={cover} alt={'dfr'}/>
       'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
   },
   {
@@ -52,8 +53,7 @@ function Carousel({posts}) {
   const handleStepChange = (step) => {
     setActiveStep(step);
   };
-
- 
+  
   return (
     <Box sx={{ flexGrow: 1 }} className='carousel'>
       <Paper
@@ -90,7 +90,7 @@ function Carousel({posts}) {
                 maxWidth: 400,
                 overflow: 'hidden',
                 width: '100%',
-                backgroundSize: 'contain'
+                // backgroundSize: 'contain'
               }}
               src={step.imgPath}
               alt={step.label}

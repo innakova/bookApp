@@ -3,23 +3,24 @@ import './select.css'
 
 export const MySelect = ({options, defaultValue, value, onChange}) => {
     return (
-        <select
+        <select className='select'
         value={value}
         onChange={event => onChange(event.target.value)}
         >
-            <options 
+            <option 
+            className='options'
             disable='true'
             value=""
             >
                 {defaultValue}
-            </options>
+            </option>
             {options.map(options =>
-                <options 
+                <option 
                 key={options.value} 
                 value={options.value}
                 >
                 {options.name}
-                </options>
+                </option>
                 )}
         </select>
     )

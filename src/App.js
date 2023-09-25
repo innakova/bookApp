@@ -7,14 +7,17 @@ import {Header} from './components/header/header'
 import Conter2 from './components/conter2/conter2';
 // import { SelectList } from './components/selectList/selectList';
 import { MySelect } from './components/UI/select/select';
+import SearchAppBar from './components/searchPanel/searchPanel';
+import SearchBox from './components/searchPanel/searchbox';
+import { SelectList } from './components/selectList/selectList';
 
 function App() {
 
   const [posts, setPosts] = useState ([
     {title: 'Sarah J. Maas', body: 'A Court of Thorns and Roses', id:'1', pages: 100},
-    {title: 'Sarah J. Maas', body: 'A Court of Mist and Fury', id:'2', pages: 100},
-    {title: 'Sarah J. Maas', body: 'A Court of Wings and Ruin', id:'3', pages: 100},
-    {title: 'Sarah J. Maas', body: 'A Court of Frost and Starlight', id:'4', pages: 100},
+    {title: 'Sarah J. Maas', body: 'A Court of Mist and Fury', id:'2', pages: 200},
+    {title: 'Sarah J. Maas', body: 'A Court of Wings and Ruin', id:'3', pages: 300},
+    {title: 'Sarah J. Maas', body: 'A Court of Frost and Starlight', id:'4', pages: 40},
 ])
 
 const [posts2, setPosts2] = useState ([
@@ -44,19 +47,25 @@ const removePost2 = (post) => {
     <Header setPosts={setPosts}/>
     <Carousel posts={posts} />
     <Counter /> 
-    <MySelect
-      // value={selectedSort}
-      // onChange={sortPosts}
-      defaultValue='Sort'
-      options={[
-          {value:'title', name: "Author"},
+    {/* <MySelect
+      value={selectedSort}
+      onChange={sortPosts}
+      defaultValue ='Sort'
+      options = {[
+          {value:'title', name:"Author"},
           {value:"body", name:"Book title"},
-          {value:'pages', name:'Page'}
-      ]}/>
+          {value:'pages', name:'Page'},
+      ]}
+    /> */}
+
+      {/* <SearchAppBar />
+      <SearchBox /> */}
             
         
     <Conter2 />
-    {/* <SelectList />    */}
+
+    <SelectList setPosts={setPosts} posts={posts}/>   
+
     {/* {posts.length !== 0
     ? */}
     <BookBlock remove={removePost} posts={posts}/>
